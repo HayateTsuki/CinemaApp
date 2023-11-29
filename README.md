@@ -12,12 +12,28 @@ Cinema app to book ticket for seans
 - PostgreSQL
 
 ## Funkcjonalności
-- logowanie do serwisu z podziałem na role klient/pracownik/administrator
-- dodawanie sal kinowych
-- dodawanie seansów
-- dodawanie filmów do bazy danych (dane o filmie i seansie, dodwanie zdjęcia filmu) 
+- logowanie do serwisu z podziałem na role klient/pracownik/administrator (autoryzacja JWT)
+- seed sal kinowych, seansów, filmów 
 - rezerwacja biletu i miejsca na seans
-- otwarte API do pobierania informacji o filmach z serwisu
-- otwarte API do pobierania informacji o zarezerwowanych biletach 
+- API do pobierania informacji o filmach z serwisu
+- API do pobierania informacji o zarezerwowanych biletach 
+
+## Dokumentacja API
+Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token
+Endpointy zwracają dane w formacie JSON
+
+Get list of:
+-> Lista sal:
+https://localhost:7001/api/halls
+
+-> Lista filmów:
+https://localhost:7001/api/movies
+
+-> Lista seansów:
+https://localhost:7001/api/screenings
+
+-> Lista rezerwacji:
+https://localhost:7001/api/bookings
+
 
 ## Harmonogram
