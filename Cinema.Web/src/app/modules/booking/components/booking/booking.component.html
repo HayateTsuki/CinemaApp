@@ -1,0 +1,55 @@
+<div class="details-wrapper" *ngIf="booking">
+  <div class="details-side details-left">
+    <div class="movie-title details-header">
+      {{ booking.screening.movie.title }}
+      <div class="details-description">
+        Sczegóły rezerwacji
+      </div>
+    </div>
+    <ul class="details-list">
+      <div class="secondary-details-wrapper">
+        <div class="secondary-detail details-description">
+          <div>Data i godzina seansu:</div>
+          <div>{{ booking.screening.date | date: "dd/MM/yyyy hh:mm" }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Data i godzina rezerwacji:</div>
+          <div>{{ booking.date | date: "dd/MM/yyyy hh:mm" }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Czas trwania filmu:</div>
+          <div>{{ booking.screening.movie.length }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Cena:</div>
+          <div>{{ booking.screening.price | currency:'zł ' }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Sala:</div>
+          <div>{{ booking.screening.hall.name }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Rząd:</div>
+          <div>{{ booking.row }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Fotel:</div>
+          <div>{{ booking.seat }}</div>
+        </div>
+        <div class="secondary-detail details-description">
+          <div>Potwierdzono:</div>
+          <div class="icon in-table-icon" [ngClass]="booking.isConfirmed ? 'icon-checked' : 'icon-not-checked'"></div>
+        </div>
+      </div>
+    </ul>
+    <div *ngIf="booking.isConfirmed" class="button book-button">wydrukuj bilet</div>
+    <div *ngIf="!booking.isConfirmed" class="movie-title details-description"><br><i>Potwierdź rezerwację, aby uzyskać możliwość wydrukowania biletu.</i></div>
+  </div>
+  <div class="details-side details-right">
+    <img
+      src="{{ booking.screening.movie.pictureUrl }}"
+      alt="No photo available"
+      class="details-img"
+    />
+  </div>
+</div>

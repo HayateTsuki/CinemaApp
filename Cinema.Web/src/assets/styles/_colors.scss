@@ -1,0 +1,36 @@
+:root {
+  --dark-gray: rgb(32, 32, 32);
+  --dropdown-blue: rgba(207, 207, 255, 0.9);
+
+  --gray-values: 128, 128, 128;
+  --standard-gray: rgb(var(--gray-values));
+  --transparent-gray-05: rgba(var(--gray-values), 0.05);
+  --transparent-gray-10: rgba(var(--gray-values), 0.10);
+  --transparent-gray-25: rgba(var(--gray-values), 0.25);
+  --transparent-gray-50: rgba(var(--gray-values), 0.50);
+  --transparent-gray-75: rgba(var(--gray-values), 0.75);  
+
+  --red-values: 255, 64, 64;
+  --standard-red: rgb(var(--red-values));
+  --transparent-red-05: rgba(var(--red-values), 0.05);
+  --transparent-red-10: rgba(var(--red-values), 0.10);
+  --transparent-red-25: rgba(var(--red-values), 0.25);
+  --transparent-red-50: rgba(var(--red-values), 0.50);
+  --transparent-red-75: rgba(var(--red-values), 0.75);
+
+  --green-values: 64, 255, 128;
+  --standard-green: rgb(var(--green-values));
+  --transparent-green-05: rgba(var(--green-values), 0.05);
+  --transparent-green-10: rgba(var(--green-values), 0.10);
+  --transparent-green-25: rgba(var(--green-values), 0.25);
+  --transparent-green-50: rgba(var(--green-values), 0.50);
+  --transparent-green-75: rgba(var(--green-values), 0.75);
+
+  --blue-values: 64, 64, 255;
+  --standard-blue: rgb(var(--blue-values));
+  --transparent-blue-05: rgba(var(--blue-values), 0.05);
+  --transparent-blue-10: rgba(var(--blue-values), 0.10);
+  --transparent-blue-25: rgba(var(--blue-values), 0.25);
+  --transparent-blue-50: rgba(var(--blue-values), 0.50);
+  --transparent-blue-75: rgba(var(--blue-values), 0.75);
+}

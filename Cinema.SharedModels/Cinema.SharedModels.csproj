@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	<CodeAnalysisRuleset>../Cinema.StyleCop/Cinema.ruleset</CodeAnalysisRuleset>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cinema.StyleCop\Cinema.StyleCop.csproj" />
+  </ItemGroup>
+
+</Project>

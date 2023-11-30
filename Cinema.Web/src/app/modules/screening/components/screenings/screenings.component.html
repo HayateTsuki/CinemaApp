@@ -1,0 +1,91 @@
+<div class="table-position">
+  <ngx-datatable
+    class="material"
+    [rows]="screenings"
+    [columnMode]="ColumnMode.flex"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+  >
+    <ngx-datatable-column
+      prop="id"
+      name="ID"
+      [flexGrow]="1"
+      [resizeable]="false"
+    >
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewScreeningDetails(row.id)"
+          ><span class="table-light">{{ row.id }}</span></a
+        >
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column
+      prop="title"
+      name="Film"
+      [flexGrow]="6"
+      [resizeable]="false"
+    >
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewScreeningDetails(row.id)">
+          <span class="movie-title-screenings">{{ row.movie.title }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column
+      prop="date"
+      name="Data"
+      [flexGrow]="4"
+      [resizeable]="false"
+    >
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a
+          class="nav-link in-table-wrapper"
+          (click)="viewScreeningDetails(row.id)"
+        >
+          <span class="table-light">{{ value | date : "dd/MM/yyyy" }}</span>
+          <span class="table-strong line-left">{{
+            value | date : "HH:mm"
+          }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column
+      prop="length"
+      name="Czas trwania"
+      [flexGrow]="3"
+      [resizeable]="false"
+    >
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewScreeningDetails(row.id)">
+          <span class="table-light">{{ row.movie.length }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column
+      prop="price"
+      name="Cena"
+      [flexGrow]="3"
+      [resizeable]="false"
+    >
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewScreeningDetails(row.id)">
+          <span class="table-light">{{ row.price | currency : "zł " }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column
+      prop="hall"
+      name="Sala"
+      [flexGrow]="2"
+      [resizeable]="false"
+    >
+      <ng-template let-row="row" let-seat="seat" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewScreeningDetails(row.id)">
+          <span class="table-light"
+            ><i>{{ row.hall.name }}</i></span
+          >
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

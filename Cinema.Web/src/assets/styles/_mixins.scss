@@ -1,0 +1,7 @@
+@mixin icon ($name) {
+    background: url('../img/#{$name}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}

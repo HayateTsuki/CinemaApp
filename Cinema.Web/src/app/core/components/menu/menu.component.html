@@ -1,0 +1,16 @@
+<div class="menu-container">
+  <button class="button" routerLink="/screenings">Seanse</button>
+  <button class="button" routerLink="/bookings">Rezerwacje</button>
+  <div class="btn-group" cinemaDropdown>
+    <button type="button" class="button"> Zarządzaj </button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-menu-element">Filmy</li>
+      <li class="dropdown-menu-element" routerLink="/screenings">Seanse</li>
+      <li class="dropdown-menu-element" routerLink="/halls">Sale</li>
+    </ul>
+  </div>  
+</div>
+<div class="logout-spot">
+  <button id="logout-btn" (click)="logout()">Wyloguj</button>
+</div>
+

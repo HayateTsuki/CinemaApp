@@ -1,0 +1,50 @@
+.login-position {
+  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.log-input {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  width: 250px;
+  height: 50px;
+  font-size: 15px;
+  text-indent: 15px;
+}
+
+.button-log {
+  border: 1px solid var(--transparent-gray-25);
+  background-color: var(--transparent-blue-10);
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  transform-origin: 0% 0%;
+  transition: background-color 0.25s;
+}
+
+.button-log:hover:valid {
+  cursor: pointer;
+  background-color: var(--transparent-green-10);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

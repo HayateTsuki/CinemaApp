@@ -1,0 +1,53 @@
+<div class="table-position">
+  <ngx-datatable
+    class="material"
+    [rows]="bookings"
+    [columnMode]="ColumnMode.flex"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+  >
+    <ngx-datatable-column prop="screening.movie.title" name="Nazwa filmu" [flexGrow]="5" [resizeable]="false">
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" (click)="viewBookingDetails(row.id)"><span class="movie-title">{{ row.screening.movie.title }}</span></a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="screening.date" name="Data seansu" [flexGrow]="4" [resizeable]="false">
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link in-table-wrapper" (click)="viewBookingDetails(row.id)">
+          <span class="table-light">{{ value | date:'dd/MM/yyyy' }}</span>
+          <span class="table-strong line-left">{{ value | date:'HH:mm' }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="date" name="Data rezerwacji" [flexGrow]="4" [resizeable]="false">
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link in-table-wrapper" (click)="viewBookingDetails(row.id)">
+          <span class="table-light">{{ value | date:'dd/MM/yyyy' }}</span>
+          <span class="table-strong line-left">{{ value | date:'HH:mm' }}</span>
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="row" name="Miejsce" [flexGrow]="4" [resizeable]="false">
+      <ng-template let-row="row" let-seat="seat" ngx-datatable-cell-template>
+        <a class="nav-link in-table-wrapper" (click)="viewBookingDetails(row.id)">
+          <div class="kept-in-row">
+            <span class="table-light">Rząd:</span>&nbsp;
+            <span class="table-strong">{{ row.row }}</span>
+          </div>
+         <div class="kept-in-row">
+            <span class="table-light line-left">Fotel:</span>&nbsp;
+            <span class="table-strong">{{ row.seat }}</span>
+         </div>          
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="isConfirmed" name="Potwierdzono" [flexGrow]="2" [resizeable]="false">
+      <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+        <a class="nav-link" style="padding: 0 1.2rem" (click)="viewBookingDetails(row.id)">
+          <div [ngClass]="row.isConfirmed ? 'icon icon-checked in-table-icon' : 'icon icon-not-checked in-table-icon'"></div>
+        </a>        
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>  
+</div>

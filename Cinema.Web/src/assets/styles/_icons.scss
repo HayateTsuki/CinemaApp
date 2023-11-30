@@ -1,0 +1,17 @@
+@import "./mixins";
+
+.icon {
+  display: block;
+  min-height: 25px;
+  min-width: 25px;
+  margin: 5px;
+  &-warning {
+    @include icon("warning.svg");
+  }
+  &-checked {
+    @include icon("checked.svg");
+  }
+  &-not-checked {
+    @include icon("not-checked.svg");
+  }
+}

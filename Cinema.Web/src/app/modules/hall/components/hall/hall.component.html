@@ -1,0 +1,52 @@
+<div class="table-position">
+  <div class="main-box">
+    <label class="main-text">Dodaj nową salę</label>
+    <div class="row">
+      <form *ngIf="hall" #hallForm="ngForm" (ngSubmit)="onSubmit(hallForm)">
+        <div class="form-group">
+          <label for="hallName">Nazwa sali</label>
+          <input
+            type="text"
+            class="form-control"
+            name="hallName"
+            required
+            [(ngModel)]="hall.name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hallRow">Ilość rzędów</label>
+          <input
+            type="number"
+            class="form-control"
+            ngModel
+            name="hallRows"
+            required
+            min="1"
+            [(ngModel)]="hall.rows"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hallSeatPerRow">Ilość miejsc</label>
+          <input
+            type="number"
+            class="form-control"
+            name="hallSeatPerRow"
+            ngModel
+            required
+            min="1"
+            [(ngModel)]="hall.seatsPerRow"
+          />
+        </div>
+        <div>
+          <button type="submit" class="btn btn-save">Zapisz</button>
+          <button type="button" class="btn btn-save" (click)="backToHalls()">
+            Cofnij
+          </button>
+        </div>
+        <label *ngIf="submitted && hallForm.hasError">Wystąpiły błędy</label>
+      </form>
+    </div>
+  </div>
+</div>

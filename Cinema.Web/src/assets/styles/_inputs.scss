@@ -1,0 +1,55 @@
+input {
+  border: 1px solid var(--transparent-gray-25);
+  background-color: var(--transparent-gray-05);
+  font-size: 12px;
+  text-indent: 10px;
+  transform-origin: 0% 50%;
+  transition: transform 0.5s;
+}
+
+input:hover,
+:focus {
+  background-color: var(--transparent-blue-05);
+  transform: scale(103%);
+}
+
+input.ng-valid {
+  background-color: var(--transparent-blue-05);
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid var(--transparent-red-25);
+  background-color: var(--transparent-red-05);
+}
+
+.input-row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.warning-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--standard-red);
+  text-transform: uppercase;
+}
+
+.fadeIn {
+  transform-origin: 0% 0%;
+  animation: fadeIn 0.05s linear;
+}
+  
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+

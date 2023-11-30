@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="onFormSubmit(form)">
+  <div class="login-position">
+    <div>
+      <div class="title">Wymagane logowanie</div>
+      <div class="input-row">
+        <input
+          class="log-input"
+          placeholder="E-mail"
+          type="text"
+          formControlName="email"
+          pattern="^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          autocomplete="on"
+        />
+      </div>
+      <div class="input-row">
+        <input
+          class="log-input"
+          placeholder="Hasło"
+          type="password"
+          formControlName="password"
+          autocomplete="on"
+        />
+      </div>
+      <button
+        type="submit"
+        class="button-log"
+        [disabled]="!f.email.valid || !f.password.valid"
+      >
+        Zaloguj się
+      </button>
+      <div class="fadeIn warning-wrapper" *ngIf="f.email.touched && !f.email.valid">
+        <div class="icon icon-warning"></div>
+        <div>niepoprawny e-mail</div>
+      </div>
+      <div class="fadeIn warning-wrapper" *ngIf="f.password.touched && !f.password.valid">
+        <div class="icon icon-warning"></div>
+        <div>wprowadź hasło</div>
+      </div>
+    </div>
+  </div>
+</form>

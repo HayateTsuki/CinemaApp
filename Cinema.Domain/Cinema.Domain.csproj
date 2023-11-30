@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+
+		<CodeAnalysisRuleset>../Cinema.StyleCop/Cinema.ruleset</CodeAnalysisRuleset>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Cinema.Core\Cinema.Core.csproj" />
+		<ProjectReference Include="..\Cinema.EF\Cinema.EF.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.16.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Data\Migrations\" />
+	</ItemGroup>
+
+</Project>

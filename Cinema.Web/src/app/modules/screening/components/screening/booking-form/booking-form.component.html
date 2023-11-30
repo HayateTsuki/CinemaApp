@@ -1,0 +1,62 @@
+<form [formGroup]="form" class="form-view">
+  <div class="form-wrapper">
+    <div class="form-title">Określ szczegóły rezerwacji</div>
+    <div class="input-row-form buttons-set">
+      <div class="form-input-caption">Rząd:</div>
+      <input
+        class="form-input"
+        type="number"
+        formControlName="row"
+        (input)="onUpdateRow($event)"
+        [min]="1"
+        [max]="screening.hall.rows"
+      />
+    </div>
+    <div class="input-row-form buttons-set">
+      <div class="form-input-caption">Fotel:</div>
+      <input
+        class="form-input"
+        type="number"
+        formControlName="seat"
+        (input)="onUpdateSeat($event)"
+        [min]="1"
+        [max]="screening.hall.seatsPerRow"
+      />
+    </div>
+    <div class="btn-group buttons-set" cinemaDropdown>
+      <div class="form-input-caption">Termin:</div>
+      <button
+        type="button"
+        class="button"
+        [innerText]="dropdownContent"
+      ></button>
+      <ul class="dropdown-menu date-menu">
+        <li
+          *ngFor="let date of screeningDates"
+          type="date"
+          class="dropdown-menu-element"
+          (click)="onUpdateDate($event, date)"
+        >
+          {{ date | date : "dd/MM/yyyy hh:mm" }}
+        </li>
+      </ul>
+    </div>
+    <div class="buttons-set">
+      <button
+        type="submit"
+        class="terminal-button submit"
+        [disabled]="!f.row.valid || !f.seat.valid || !choosenDate"
+        (click)="onFormSubmit()"
+      >
+        Rezerwuj
+      </button>
+      <button
+        type="submit"
+        class="terminal-button cancel"
+        (click)="onFormCancel()"
+      >
+        Anuluj
+      </button>
+    </div>
+  </div>
+</form>
