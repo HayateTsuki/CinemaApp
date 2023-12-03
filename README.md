@@ -44,7 +44,27 @@ Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token.
 Endpointy zwracają dane w formacie JSON.
 
 -> Lista sal:
-https://localhost:7001/api/halls
+https://localhost:7001/api/halls  
+--> Pojedynczy rekord o numerze id (np.: 1):  
+https://localhost:7001/api/halls/1  
+---> Dodanie nowej sali (request POST):  
+https://localhost:7001/api/halls  
+ ```json
+  {
+        "Name": "New hall",
+        "SeatsPerRow": 76,
+        "Rows": 122
+}
+  ```
+----> Update sali o numerze id (np.: 1) (request PUT):  
+```json
+  {
+        "Id": "7",
+        "Name": "Big hallings",
+        "SeatsPerRow": 72,
+        "Rows": 12
+}
+  ```
 
 -> Lista filmów:
 https://localhost:7001/api/movies
