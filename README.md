@@ -43,7 +43,7 @@ W body requesta POST należy zawrzeć email i password użytkownika w formacie J
 Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token. 
 Endpointy zwracają dane w formacie JSON.
 
--> Lista sal:
+-> Lista sal:  
 https://localhost:7001/api/halls  
 --> Pojedynczy rekord o numerze id (np.: 1):  
 https://localhost:7001/api/halls/1  
@@ -56,7 +56,8 @@ https://localhost:7001/api/halls
         "Rows": 122
 }
   ```
-----> Update sali o numerze id (np.: 1) (request PUT):  
+----> Update sali (request PUT):  
+https://localhost:7001/api/halls  
 ```json
   {
         "Id": "7",
@@ -66,11 +67,25 @@ https://localhost:7001/api/halls
 }
   ```
 
--> Lista filmów:
-https://localhost:7001/api/movies
+-> Lista filmów:  
+https://localhost:7001/api/movies  
+--> Pojedynczy rekord o numerze id (np.: 1):  
+https://localhost:7001/api/movies/1  
 
--> Lista seansów:
-https://localhost:7001/api/screenings
+-> Lista seansów:  
+https://localhost:7001/api/screenings  
+--> Pojedynczy rekord o numerze id (np.: 1):  
+https://localhost:7001/api/screenings/1  
+---> Dodanie nowego seansu (request POST)  
+https://localhost:7001/api/screenings  
+----> Update seansu (request PUT)  
+https://localhost:7001/api/screenings  
 
--> Lista rezerwacji:
-https://localhost:7001/api/bookings
+-> Lista rezerwacji:  
+https://localhost:7001/api/bookings  
+--> Pojedynczy rekord o numerze id (np.: 1):  
+https://localhost:7001/api/bookings/1  
+---> Dodanie nowej rezerwacji (request POST)  
+https://localhost:7001/api/bookings  
+----> Usunięcie seansu o numerze id (np.: 1) (request DELETE)  
+https://localhost:7001/api/bookings/1  
