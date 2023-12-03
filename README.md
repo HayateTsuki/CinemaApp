@@ -18,7 +18,7 @@ Cinema app to book ticket for seans
 - API do pobierania informacji o filmach z serwisu
 - API do pobierania informacji o zarezerwowanych biletach 
 
-## Connection string (dane potrzebne do połaczenia z bazą danych)
+## Connection string 
 "DbConnectionString": "Server=localhost; Port=5432; Database=postgres; User Id=postgres; Password=postgres"
 
 ## Dane do autentykacji
