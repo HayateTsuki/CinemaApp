@@ -22,6 +22,15 @@ Cinema app to book ticket for seans
 Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token
 Endpointy zwracają dane w formacie JSON
 
+Dane do autentykacji:
+-user@gmail.com
+-User321123
+
+LUB
+-cinema@gmail.com
+-Cinema321123
+
+
 Get list of:
 -> Lista sal:
 https://localhost:7001/api/halls
