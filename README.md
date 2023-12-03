@@ -22,22 +22,27 @@ Cinema app to book ticket for seans
 "DbConnectionString": "Server=localhost; Port=5432; Database=postgres; User Id=postgres; Password=postgres"
 
 ## Dane do autentykacji
-email: user@gmail.com
-password: User321123
+email: user@gmail.com  
+password: User321123  
 
-LUB
-email: cinema@gmail.com
+`LUB`     
+email: cinema@gmail.com  
 password: Cinema321123
 
-### Endpoint do uzyskania Bearer Tokenu
-https://localhost:7001/api/account/login
-W body requesta POST należy zawrzeć email i password użytkownika w formacie JSON. W odpowiedzi zwrotnej otrzyma się między innymi token potrzebny do otrzymania informacji z innych endpointów.
+## Endpoint do uzyskania Bearer Tokenu
+https://localhost:7001/api/account/login   
 
+W body requesta POST należy zawrzeć email i password użytkownika w formacie JSON. W odpowiedzi zwrotnej otrzyma się między innymi token potrzebny do otrzymania informacji z innych endpointów.
+ ```json
+  {
+    "email": "user@gmail.com",
+    "password": "User321123"
+}
+  ```
 ## Dokumentacja API
 Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token. 
 Endpointy zwracają dane w formacie JSON.
 
-Get list of:
 -> Lista sal:
 https://localhost:7001/api/halls
 
@@ -49,6 +54,3 @@ https://localhost:7001/api/screenings
 
 -> Lista rezerwacji:
 https://localhost:7001/api/bookings
-
-
-## Harmonogram
