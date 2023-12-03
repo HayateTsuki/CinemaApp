@@ -12,7 +12,7 @@ Cinema app to book ticket for seans
 - PostgreSQL
 
 ## Funkcjonalności
-- logowanie do serwisu z podziałem na role klient/pracownik/administrator (autoryzacja JWT)
+- logowanie do serwisu (autoryzacja JWT)
 - seed sal kinowych, seansów, filmów 
 - rezerwacja biletu i miejsca na seans
 - API do pobierania informacji o filmach z serwisu
