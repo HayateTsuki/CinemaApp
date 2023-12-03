@@ -18,11 +18,10 @@ Cinema app to book ticket for seans
 - API do pobierania informacji o filmach z serwisu
 - API do pobierania informacji o zarezerwowanych biletach 
 
-## Dokumentacja API
-Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token
-Endpointy zwracają dane w formacie JSON
+## Connection string (dane potrzebne do połaczenia z bazą danych)
+"DbConnectionString": "Server=localhost; Port=5432; Database=postgres; User Id=postgres; Password=postgres"
 
-Dane do autentykacji:
+## Dane do autentykacji
 -user@gmail.com
 -User321123
 
@@ -30,6 +29,9 @@ LUB
 -cinema@gmail.com
 -Cinema321123
 
+## Dokumentacja API
+Dostęp do endpointów po wcześniejszej autoryzacji poprzez JWT/Bearer Token
+Endpointy zwracają dane w formacie JSON
 
 Get list of:
 -> Lista sal:
